@@ -1,0 +1,54 @@
+@use '../variables';
+
+
+.infos-bar {
+    padding: 16px 24px;
+    background-color: variables.$textcolor;
+    display: flex; // coloquei display flex aqui para que o botão e os itens estivessem um ao lado do outro no container
+    justify-content: space-between; // aqui adicionei space-bettween para que sejam distribuidos aos extromos, com o botão ao lado direito, bem responsivo
+    
+    &__infos {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 14px;
+            color: variables.$secundaryTextColor;
+            display:block;
+
+            b { // o "b" por padrão tem o padrão "inline" por isso adicionei o display "block"
+                color: #000;
+                font-size: 18px;
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        &__infos {
+            display: block;
+            margin-bottom: 24px;
+
+            &__item {
+            margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__infos {
+            gap: 24px;
+            width: 100%;
+        }
+        
+    }
+
+    @media (max-width: 1024px) {
+        &__infos {
+            gap: 16px;
+            width: 500px;
+        }
+        
+    }
+}

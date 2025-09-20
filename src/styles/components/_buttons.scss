@@ -1,0 +1,93 @@
+@use '../variables';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal; // permitir quebra por padrão para evitar overflow em tablets
+
+    &--primary {
+        color: #fff;
+        background-color: variables.$purple;
+        text-decoration: none;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        white-space: normal;
+    }
+    
+    &--primary-mobile {
+         color: #fff;
+        background-color: variables.$purple;
+        text-decoration: none;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    @media (max-width: 640px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 5px;
+
+        /* allow text to wrap inside the button and keep it centered */
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        text-align: center;
+
+        /* no mobile: esconder botão desktop e mostrar botão mobile */
+        &--primary {
+            display: none;
+            width: auto;
+        }
+
+        &--primary-mobile {
+            display: inline-flex;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        flex-wrap: wrap;
+        /* ensure button content can shrink and wrap to avoid overflow on tablets */
+        overflow: visible;
+    }
+
+    @media (min-width: 768px) {
+        /* no desktop: esconder botão mobile e mostrar botão desktop */
+        &--primary-mobile {
+            display: flex;
+            margin-left: 5px;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        /* desktop: prevenir quebras se for necessário */
+        /* permitir quebra de texto dentro do botão no desktop para evitar overflow */
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+}

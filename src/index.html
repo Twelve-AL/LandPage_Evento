@@ -4,28 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varandinha</title>
+    <link rel="icon" type="image/png" href="./images/LogoEmV">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
     <header class="hero">
         <div class="container">
-            <img class="hero__logo" src="./images/ebac_logo.svg" alt="EBAC">
+            <img class="hero__logo" src="./images/logo.varandinha1" alt="Varandinha Logo">
 
             <p class="hero__text">
-                O maior evento de tecnologia do Brasil começa em 10d 20h 07m 10s
+                Varandinha - 1 Ano De Sucesso <br> <span id="contador"></span>
             </p>
+            <div class="infos-bar">
+                <ul class="infos-bar__infos">
+                    <li class="infos-bar__infos__item">
+                        <b>Localização</b>
+                        Vila Muriqui, Mangaratiba - RJ
+                    </li>
+                    <li class="infos-bar__infos__item">
+                        <b>Preço</b>
+                        A partir de R$ 30,00
+                    </li>
+                    <li class="infos-bar__infos__item">
+                        <b>Quando</b>
+                        27/09/2025 ás 21:00
+                    </li>
+                </ul>
+                <a href="https://wa.me/5521987679414?text=Ol%C3%A1!%20Quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20evento%20Varandinha!" class="button button--primary">
+                Comprar seu ingresso via Pix
+                </a>
+                <a href="https://www.guicheweb.com.br/varandinha-1-ano-de-sucesso_45218" class="button button--primary-mobile">
+                Comprar seu ingresso via Cartão
+                </a>
+            </div>
         </div>
     </header>
 
+    <section class="event event--frontend">
+        <div class="container"  data-aos="fade-right">
+            <div class="event__details">
+                <h2 class="event__details__title">Mapa do Local</h2>
+
+                <p class="event__details__description">
+                    Veja no mapa a disposição dos espaços da Varandinha: do palco à área de alimentação, banheiros e bares. Assim você já chega sabendo onde aproveitar cada momento da festa!
+                </p>
+            </div>
+            <img class="event__image" src="./images/varandinha_mapa" alt="Front-end">
+        </div>
+    </section>
+     <section class="event event--ux-ui event--image-left">
+        <div class="container"  data-aos="fade-left">
+            <div class="event__details">
+                <h2 class="event__details__title">Mr.Dan</h2>
+
+                <p class="event__details__description">
+                    Um show de Mr. Dan é aquela mistura de alegria, romantismo e muita energia boa. Prepare-se para cantar junto, se emocionar e viver uma noite com hits que marcam. Garanta já seu ingresso e faça parte dessa experiência única!
+                </p>
+            </div>
+            <img class="event__image" src="./images/Mr.DanImagem" alt="Front-end">
+        </div>
+    </section>
+    <section class="event event--data-science" >
+        <div class="container" data-aos="fade-right">
+            <div class="event__details">
+                <h2 class="event__details__title">Bruna Almeida</h2>
+
+                <p class="event__details__description">
+                    Bruna Almeida traz a emoção à flor da pele em cada apresentação. Com uma voz marcante e repertório cheio de sucessos, ela transforma qualquer palco em um momento inesquecível. Vem sentir essa energia ao vivo! Garanta já seu ingresso e vamos viver essa noite com a Bruna!
+                </p>
+            </div>
+            <img class="event__image" src="./images/BrunaAlmeidaImagem" alt="Front-end">
+        </div>
+    </section>
+    <section class="event event--backend event--image-left">
+        <div class="container" data-aos="fade-left">
+            <div class="event__details">
+                <h2 class="event__details__title">Ultímos eventos</h2>
+
+                <p class="event__details__description">
+                   Chegou a hora de viver a festa mais comentada! A cada edição, a galera faz história, muita música e alegria do começo ao fim. Vem garantir seu lugar nesse evento inesquecível da Costa Verde e fazer parte desse sucesso!
+                </p>
+                <video 
+  id="meuVideo"
+  src="./images/Um mega aniversário, e o presente são vocês que vão receber! ❤ATRAÇÃO INÉDITA NA COSTA VERDE ✍🏽.mp4"
+  controls
+class="event__image" style="max-width:100%; height:auto;">
+  Seu navegador não suporta vídeo.</video>
+            </div>
+
+            
+        </div>
+    </section>
+    <footer style="text-align:center; padding: 20px 0; font-size:14px; color:#666;">
+  &copy; 2025 Varandinha. Todos os direitos reservados.
+</footer>
 
 
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

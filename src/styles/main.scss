@@ -1,24 +1,67 @@
-@use 'hero';
+@use 'hero'; //aqui nesse "use" eu estou importando outro layout, 
+//para não precisar ficar digitando tudo a mão, isso já facilita e já trás tudo através do "use"
+@use 'components/infos_bar';
+@use 'components/buttons';
+@use 'event';
+@use 'variables';
 
 
+/* evita scroll horizontal em telas menores */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* garante que mídias não ultrapassem a largura do container */
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    color: variables.$textcolor;
+    list-style: none;
 }
 
 .container {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
 
     @media (max-width: 640px) {
-        max-width: 80%;
+        max-width: 100%;
+        
     }
 
-    @media (max-width: 1024) {
+    @media (max-width: 1024px) {
         max-width: 90%;
+    }
+}
+
+/* Ajustes para imagem de fundo do hero:
+   - desktop: cover (preenchimento)
+   - tablet/mobile: contain (imagem completa)
+   - centraliza e evita repeat
+*/
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* em telas menores, mostra a imagem inteira sem cortar */
+@media (max-width: 1024px) {
+    .hero {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
